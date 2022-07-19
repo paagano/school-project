@@ -79,7 +79,7 @@
     <!--END SLIDING IMAGE-->
 
     <!--MAIN CONTENT SECTION-->
-    <div class="container mb-3">
+    <div class="container mb-3" id="main-body">
       
       <div class="row">
         <div class="col">
