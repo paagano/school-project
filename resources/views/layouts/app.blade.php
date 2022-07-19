@@ -14,11 +14,11 @@
       crossorigin="anonymous"
     />
     <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css"
+      rel="{{ 'stylesheet' }}"
+      href="{{ 'https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css' }}"
     />
 
-    <link rel="stylesheet" href="{{ url('css\customStyles.css') }}">
+    <link rel="{{ 'stylesheet' }}" href="{{ url('css\customStyles.css') }}">
     
 </head>
 <body>
