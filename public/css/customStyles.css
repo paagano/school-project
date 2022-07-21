@@ -5,9 +5,9 @@
 }
 
 body {
-    background-color: lightgreen;
+    background-color: lightgrey;
     font-family: sans-serif;
-    height: 200vh;
+    height: 100vh;
 }
 .logo {
     height: 50px;
@@ -38,6 +38,7 @@ ul {
 a {
     color: white;
     text-decoration: none;
+    padding: 3px;
 }
 .hov:hover {
     color: white;
@@ -53,5 +54,21 @@ a {
 }
 
 .first-heading {
+    text-align: center;
+}
+
+.featured {
+    max-width: 960px;
+    margin: auto;
+}
+
+.login-form {
+    max-width: 400px;
+    margin: auto;
+    background-color: skyblue;
+    padding: 20px;
+}
+
+.sign-up {
     text-align: center;
 }

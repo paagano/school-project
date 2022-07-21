@@ -18,19 +18,33 @@ Route::get('/', function () {
     return view('home');
 });
 
-Route::get('/login', function () {
-    return view('pages.login');
-
+Route::get('/home', function () {
+    return view('home');
 });
 
-Route::get('/signup', function () {
-    return view('pages.signup');
-
-});Route::get('/users', function () {
-    return view('users');
+Route::get('/about', function () {
+    return view('pages.about');
+});
+ 
+Route::get('/places', function () {
+    return view('pages.places');
 });
 
-Route::get('/registration', [UserController::class, 'registration']);
+Route::get('/reviews', function () {
+    return view('pages.reviews');
+});
 
-Route::post('/register-user', [UserController::class, 'registerUser'])->name('register-user');
+Route::get('/blog', function () {
+    return view('pages.blog');
+});
+
+Route::get('/users', function () {
+    return view('pages.users');
+});
   
+Route::get('login', [UserController::class, 'login']);//->middleware('alreadyLoggedIn');
+Route::get('signup', [UserController::class, 'signup']);//->middleware('alreadyLoggedIn');
+Route::post('register-user', [UserController::class, 'registerUser'])->name('register-user');
+Route::post('login-user', [UserController::class, 'loginUser'])->name('login-user');
+Route::get('udashboard',[UserController::class, 'udashboard']);//->middleware('isLoggedIn');
+Route::get('logout',[UserController::class, 'logout'] );

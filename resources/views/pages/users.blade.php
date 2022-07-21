@@ -1,4 +1,4 @@
 @extends('layouts.app')
 @section('content')
-     <H1>Find Places to visit and things to do!</H1>
+     <H1>List of Users:</H1>
 @endsection
