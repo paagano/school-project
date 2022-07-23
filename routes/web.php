@@ -23,6 +23,7 @@ Route::get('/users', function () {
     return view('pages.users');
 });
 
+// Loading Pages:
 Route::get('/', [PagesController::class, 'homePage']);
 Route::get('/about', [PagesController::class, 'aboutPage']);
 Route::get('/places', [PagesController::class, 'placesPage']);
@@ -31,8 +32,8 @@ Route::get('/blog', [PagesController::class, 'blogPage']);
 Route::get('/login', [PagesController::class, 'loginPage']);//->middleware('alreadyLoggedIn');
 Route::get('/signup', [PagesController::class, 'signupPage']);//->middleware('alreadyLoggedIn');
 
-
-Route::post('register-user', [UsersController::class, 'registerUser'])->name('register-user');
-Route::post('login-user', [UsersController::class, 'loginUser'])->name('login-user');
-Route::get('udashboard',[UsersController::class, 'udashboard']);//->middleware('isLoggedIn');
-Route::get('logout',[UsersController::class, 'logout'] );
+// Handling User registration, login, logout etc
+Route::post('/register-user', [UsersController::class, 'registerUser'])->name('register-user');
+Route::post('/login-user', [UsersController::class, 'loginUser'])->name('login-user');
+Route::get('/udashboard',[UsersController::class, 'udashboard']);//->middleware('isLoggedIn');
+Route::get('/logout',[UsersController::class, 'logout'] );

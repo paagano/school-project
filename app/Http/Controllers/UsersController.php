@@ -1,7 +1,9 @@
 <?php
 
 namespace App\Http\Controllers;
+
 use Illuminate\Http\Request;
+
 use App\Models\User;
 use Illuminate\Support\Facades\Hash;  // use Hash;
 use Session;
@@ -62,6 +64,7 @@ class UsersController extends Controller
         }
     }
 }
+
 
 
 
