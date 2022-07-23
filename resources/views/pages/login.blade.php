@@ -2,7 +2,7 @@
 
 @section('content')
 
-<h1 class="sign-up">Login:</h1>
+<h1 class="sign-up">Login To Discover More!</h1>
 <div class="login-form rounded">
     <form action="{{route('login-user')}}" method="post">
        @if(Session::has('success'))

@@ -39,7 +39,7 @@ class UsersController extends Controller
         if($user){
             if(Hash::check($request->password, $user->password)){
                $request->session()->put('loginId', $user->id);
-               return redirect('pages.udashboard');
+               return redirect('udashboard');
             }else{
                 return back()->with('fail', 'Wrong credentials.');
             }
@@ -58,11 +58,11 @@ class UsersController extends Controller
     }
 
     public function logout(){
-        if(Session::has('loginId')){
-         Session::pull('loginId');
-         return redirect('pages.login'); 
+    //     if(Session::has('loginId')){
+    //      Session::pull('loginId');
+            return redirect('home');
         }
-    }
+    
 }
 
 
