@@ -6,15 +6,8 @@ use App\Models\User;
 use Illuminate\Support\Facades\Hash;  // use Hash;
 use Session;
 
-class UserController extends Controller
+class UsersController extends Controller
 {
-    // public function login(){
-    //     return view("pages.login");
-    // }
-
-    // public function signup(){
-    //     return view("pages.signup");
-    // }
 
     public function registerUser(Request $request){
         $request->validate([
