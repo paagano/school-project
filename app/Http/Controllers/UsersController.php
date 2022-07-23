@@ -8,13 +8,13 @@ use Session;
 
 class UserController extends Controller
 {
-    public function login(){
-        return view("pages.login");
-    }
+    // public function login(){
+    //     return view("pages.login");
+    // }
 
-    public function signup(){
-        return view("pages.signup");
-    }
+    // public function signup(){
+    //     return view("pages.signup");
+    // }
 
     public function registerUser(Request $request){
         $request->validate([

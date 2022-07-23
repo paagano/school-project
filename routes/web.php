@@ -1,7 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\UserController;
+use App\Http\Controllers\UsersController;
+use App\Http\Controllers\PagesController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,37 +15,24 @@ use App\Http\Controllers\UserController;
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-});
-
 Route::get('/home', function () {
-    return view('home');
-});
-
-Route::get('/about', function () {
-    return view('pages.about');
-});
- 
-Route::get('/places', function () {
-    return view('pages.places');
-});
-
-Route::get('/reviews', function () {
-    return view('pages.reviews');
-});
-
-Route::get('/blog', function () {
-    return view('pages.blog');
+    return view('pages.home');
 });
 
 Route::get('/users', function () {
     return view('pages.users');
 });
-  
-Route::get('login', [UserController::class, 'login']);//->middleware('alreadyLoggedIn');
-Route::get('signup', [UserController::class, 'signup']);//->middleware('alreadyLoggedIn');
-Route::post('register-user', [UserController::class, 'registerUser'])->name('register-user');
-Route::post('login-user', [UserController::class, 'loginUser'])->name('login-user');
-Route::get('udashboard',[UserController::class, 'udashboard']);//->middleware('isLoggedIn');
-Route::get('logout',[UserController::class, 'logout'] );
+
+Route::get('/', [PagesController::class, 'homePage']);
+Route::get('/about', [PagesController::class, 'aboutPage']);
+Route::get('/places', [PagesController::class, 'placesPage']);
+Route::get('/reviews', [PagesController::class, 'reviewsPage']);
+Route::get('/blog', [PagesController::class, 'blogPage']);
+Route::get('/login', [PagesController::class, 'loginPage']);//->middleware('alreadyLoggedIn');
+Route::get('/signup', [PagesController::class, 'signupPage']);//->middleware('alreadyLoggedIn');
+
+
+Route::post('register-user', [UsersController::class, 'registerUser'])->name('register-user');
+Route::post('login-user', [UsersController::class, 'loginUser'])->name('login-user');
+Route::get('udashboard',[UsersController::class, 'udashboard']);//->middleware('isLoggedIn');
+Route::get('logout',[UsersController::class, 'logout'] );
