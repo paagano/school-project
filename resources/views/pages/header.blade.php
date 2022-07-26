@@ -3,13 +3,13 @@
         <img src="{{ 'images\me.jpg' }}" alt="" class="logo" />
       </h1>
       <ul class="nav-list">
-        <li class="item hov"><a href="{{ 'home' }}">Home</a></li>
+        <li class="item hov {{ Request::RouteIs('home') ? 'active' : '' }}"><a href="{{ route('home') }}">Home</a></li>
         <li class="item hov"><a href="{{ 'about' }}">About KTC</a></li>
         <li class="item hov"><a href="{{ 'places' }}">Places | <small>Things To Do</small></a></li>
         <li class="item hov"><a href="{{ 'login' }}">My Trips</a></li>
         <li class="item hov"><a href="{{ 'reviews' }}">Reviews</a></li>
         <li class="item hov"><a href="{{ 'more' }}">More...</a></li>
-        <li class="item hov"><a href="{{ 'blog' }}">Blog</li>
+        <li class="item hov"><a href="{{ 'blog' }}">Stories | <small>Share Your Adventures</small></li>
         <li class="item button"><a href="{{ 'login' }}">Login</a></li>
         <li class="item button secondary"><a href="{{ 'signup' }}">Sign Up</a></li>
         <li>

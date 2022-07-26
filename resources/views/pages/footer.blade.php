@@ -23,7 +23,7 @@
         </h1>
 
         <div class="col-md-4 d-flex align-items-center">
-          <span class="">&copy; 2022 Philip Agano, Inc</span>
+          <span class="">&copy; 2022 Philip Agano | All Rights Reserved</span>
         </div>
 
         <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">

@@ -20,7 +20,7 @@
     />
 
     <!-- myCustom CSS -->
-    <link rel="{{ 'stylesheet' }}" href="{{ url('css\customStyles.css') }}">
+    <link rel="{{ 'stylesheet' }}" href="{{ asset('css\customStyles.css') }}">
     
 </head>
 <body>

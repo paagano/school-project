@@ -1,4 +1,4 @@
 @extends('layouts.app')
 @section('content')
-     <H1>Learn more about this beautiful part of the world called KENYA!</H1>
+     <H1>Blog Posts</H1>
 @endsection
