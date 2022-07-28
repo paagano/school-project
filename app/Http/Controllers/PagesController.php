@@ -31,13 +31,4 @@ class PagesController extends Controller
         return view("pages.places");
     }
 
-        public function reviewsPage()
-    {
-        return view("pages.reviews");
-    }
-
-        public function blogPage()
-    {
-        return view("pages.blog");
-    }
 }

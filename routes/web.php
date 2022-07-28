@@ -29,8 +29,8 @@ Route::get('/users', function () {
 Route::get('/', [PagesController::class, 'homePage'])->name('home');
 Route::get('/about', [PagesController::class, 'aboutPage']);
 Route::get('/places', [PagesController::class, 'placesPage']);
-Route::get('/reviews', [PagesController::class, 'reviewsPage'])->name('reviews');
-Route::get('/blog', [PagesController::class, 'blogPage']);
+Route::get('/reviews', [ReviewsController::class, 'reviewsPage'])->name('reviews');
+Route::get('/blog', [BlogPostsController::class, 'blogPage']);
 Route::get('/login', [PagesController::class, 'loginPage']);//->middleware('alreadyLoggedIn');
 Route::get('/signup', [PagesController::class, 'signupPage']);//->middleware('alreadyLoggedIn');
 

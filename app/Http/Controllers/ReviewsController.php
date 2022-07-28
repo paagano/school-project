@@ -11,9 +11,9 @@ class ReviewsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function reviewsPage()
     {
-        //
+        return view("reviews.reviews");
     }
 
     /**

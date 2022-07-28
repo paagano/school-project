@@ -11,9 +11,9 @@ class BlogPostsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function blogPage()
     {
-        //
+        return view("blogposts.blog");
     }
 
     /**
