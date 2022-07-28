@@ -14,7 +14,7 @@
           @csrf
   <div class="mb-3">
     <label for="exampleInputUsername1" class="form-label">Username</label>
-    <input type="text" class="form-control" name="username" id="exampleInputUsername1" aria-describedby="usernameHelp" placeholder="Enter Your Username here...">
+    <input type="text" class="form-control" name="username" id="exampleInputUsername1" aria-describedby="usernameHelp" placeholder="Enter Your Username here..." value="{{ old('username') }}">
   </div>
   <div class="mb-3">
     <label for="exampleInputPassword1" class="form-label">Password</label>
