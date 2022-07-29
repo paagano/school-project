@@ -19,10 +19,14 @@ class UsersController extends Controller
             'password'=>'required|min:6|max:12'
         ]);
 
+        $username = $request->username;
+        $email = $request->email;
+        $password = Hash::make($request->password);
+
         $user = new User(); //check alternative shorter syntax from Code With Dary
-        $user->username = $request->username;
-        $user->email = $request->email;
-        $user->password = Hash::make($request->password);
+        $user->username = $username;
+        $user->email = $email;
+        $user->password = $password;
         $res = $user->save();
 
         if ($res) {
