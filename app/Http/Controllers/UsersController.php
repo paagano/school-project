@@ -51,7 +51,7 @@ class UsersController extends Controller
                $request->session()->put('loginId', $user->id);
                return redirect('udashboard');
             } else {
-                return back()->with('fail', 'Wrong credentials.');
+                return back()->with('fail', 'Wrong Credentials.');
             }
         } else {
             return back()->with('fail', 'This username is not registered.');
@@ -60,7 +60,7 @@ class UsersController extends Controller
 
     public function udashboard() {
         $data = array();
-        if(Session::has('loginId')){
+        if(Session::has('loginId')) {
             $data = User::where('id', '=',Session::get('loginId'))->first();
         }
         return view('pages.udashboard', compact('data'));

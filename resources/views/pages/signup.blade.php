@@ -8,9 +8,11 @@
             @if(Session::has('success'))
             <div>{{Session::get('success')}}</div>
             @endif
+
             @if(Session::has('fail'))
             <div>{{Session::get('fail')}}</div>
             @endif
+
             @csrf
             <div class="mb-3">
               <label for="exampleInputUsername1" class="form-label">Username</label>
@@ -46,6 +48,8 @@
 
 
 @endsection
+
+!
 
 
 
